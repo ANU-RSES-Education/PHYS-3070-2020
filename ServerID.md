@@ -16,4 +16,5 @@ There will be errors if the github secrets have not been set up
 Rebuilt droplet / test the installer workflow 
   - Running Ubuntu 19
   - Use hostname rather than IP in secrets
+  - 1Gb memory does not seem to be enough to install and rebuild TLJH - resizing to 2Gb
   
