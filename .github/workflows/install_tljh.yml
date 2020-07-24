@@ -35,8 +35,11 @@ jobs:
         $REMOTE_SH "curl https://raw.githubusercontent.com/underworld-geodynamics-cloud/the-littlest-jupyterhub/master/bootstrap/bootstrap.py | sudo python3 -  --admin $HUBADMIN:$HUBADMIN_PASS" 
         
         # This is optional if you want to use a different authenticator
-        $REMOTE_SH "sudo tljh-config set auth.type nativeauthenticator.NativeAuthenticator"
-        $REMOTE_SH "sudo tljh-config reload hub"
+        # The default is FirstUse (https://tljh.jupyter.org/en/latest/howto/auth/firstuse.html)
+        # This is probably the easiest one to manage as long as you know usernames in advance.
+        # If not ... 
+        # $REMOTE_SH "sudo tljh-config set auth.type nativeauthenticator.NativeAuthenticator"
+        # $REMOTE_SH "sudo tljh-config reload hub"
 
         # And this changes the default to use jupyterlab
         $REMOTE_SH "sudo tljh-config set user_environment.default_app jupyterlab"
