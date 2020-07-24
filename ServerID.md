@@ -6,15 +6,14 @@ upgraded (that needs to be managed from the console).
 
 There will be errors if the github secrets have not been set up 
 
- - **IP Address:** http://128.199.153.60
- - **Hostname:** https://test.rses.underworldcloud.org 
+ - **IP Address:** 128.199.88.192
+ - **Hostname:** https://phys3070.rses.underworldcloud.org
  - **Release ID:** 0.1.0
- - **Droplet Name:** ubuntu-rses-earth-sci-dev
+ - **Droplet Name:** ubuntu-phys-3070-2020
  
  ## Comments
    
 Rebuilt droplet / test the installer workflow 
-  - Note: rebuilding the droplet resets the root password to a temporary value
-  - Note: remove old ssh key as well using `ssh-keygen -R [hostname-or-IP]`
-  - Switching to ubuntu 19 for testing purposes
+  - Running Ubuntu 19
+  - Use hostname rather than IP in secrets
   
