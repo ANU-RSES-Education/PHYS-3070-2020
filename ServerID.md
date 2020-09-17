@@ -8,7 +8,7 @@ There will be errors if the github secrets have not been set up
 
  - **IP Address:** 128.199.88.192
  - **Hostname:** https://phys3070.rses.geoscience.education
- - **Release ID:** 0.1.0
+ - **Release ID:** 0.2.0
  - **Droplet Name:** ubuntu-phys-3070-2020
  
  ## Comments
@@ -16,5 +16,5 @@ There will be errors if the github secrets have not been set up
 Rebuilt droplet / test the installer workflow 
   - Running Ubuntu 19
   - Use hostname rather than IP in secrets
-  - 1Gb memory does not seem to be enough to install and rebuild TLJH - resizing to 2Gb
+  - 1Gb memory does not seem to be enough to install and rebuild TLJH - resizing to 2Gb (1.15 now needed according to docs)
   
