@@ -3,14 +3,15 @@ channels:
     - conda-forge
     - underworldcode
 dependencies:
+    - nb_conda_kernels
     - stripy
     - litho1pt0
     - quagmire
     - cartopy
     - obspy
     - pandas
-    - pip 
-    - libiconv  # Not sure why this is not a dependency of lxml (conda bug)
-
-
-
+    - pip
+    - libiconv
+    - swig
+    - scons
+    - compilers 
