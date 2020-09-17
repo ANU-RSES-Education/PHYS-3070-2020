@@ -12,6 +12,11 @@ dependencies:
     - pandas
     - pip
     - libiconv
-    - swig
+    - swig>=4.0.0
     - scons
     - compilers 
+    - pip:
+      - xvfbwrapper
+      - lavavu
+      # - underworldcode # unlikely to build - need a script for this
+
