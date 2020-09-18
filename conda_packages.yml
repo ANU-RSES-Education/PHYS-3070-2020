@@ -17,6 +17,6 @@ dependencies:
     - compilers 
     - pip:
       - xvfbwrapper
-      - lavavu
-      # - underworldcode # unlikely to build - need a script for this
+      - lavavu  # the apt-get packages should be sufficient for this to build
+      # - underworldcode # needs environment variables to be set - see installer script
 
