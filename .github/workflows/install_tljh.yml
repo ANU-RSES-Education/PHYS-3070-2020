@@ -60,10 +60,13 @@ jobs:
         sudo -E sshpass -e scp conda_packages.yml root@${{ secrets.DROPLET_IP }}:conda_packages.yml
         $REMOTE_SH 'sudo -E /opt/tljh/user/bin/conda env update -n base --file conda_packages.yml'
         
-        # This is the lavavu install (note, lavavu introduces the list of apt-get dependencies)
+        # This is the lavavu install but the apt-get dependencies already loaded should work now and the pip install is in the requirements
         # $REMOTE_SH 'sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev libglu1-mesa-dev libx11-dev xvfb'
-        $REMOTE_SH "sudo -E /opt/tljh/user/bin/pip install lavavu xvfbwrapper"
-
+        # $REMOTE_SH "sudo -E /opt/tljh/user/bin/pip install lavavu xvfbwrapper"
+        
+        # This is the underworld install and it nees some config that won't work in the packages.yml file
+        $REMOTE_SH "export PYTHON_DIR='/opt/tljh/user'; export LIBXML2_DIR="/opt/tljh/user" ; sudo -E /opt/tljh/user/bin/pip install underworld"
+      
         # # Notebook extensions are handled like this (mostly this does not work well with current versions of notebook)
         # $REMOTE_SH 'sudo -E /opt/tljh/user/bin/pip install jupyter_contrib_nbextensions'
         # $REMOTE_SH 'sudo -E /opt/tljh/user/bin/jupyter contrib nbextension install --sys-prefix'
